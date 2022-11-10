@@ -3,10 +3,10 @@
 
 ## Group Members
 - Linda Huang
-- Bana Nourkeyhani @BanaNourk
+- Bana Nourkeyhani @Github/@BanaNourk
 - Ivan Somera
-- Robert Li @BubbleCarrot
-- Bent Vandenheede @bentvandenheede
+- Robert Li @Github/BubbleCarrot
+- Bent Vandenheede @Github/@bentvandenheede
 
 ## Read Me!
 The following repo is a student project conducted at BCIT for New Media Design & Web Development
