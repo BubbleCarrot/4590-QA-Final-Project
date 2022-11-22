@@ -17,7 +17,11 @@ Class: MDIA 4590 Quality Assurance
 ## Installation packages
 
     npm install
-    php composer.phar install
+    composer install
+
+copy .env.example and make key
+
+    php artisan key:generate
 
 ## Run development
 
