@@ -1,0 +1,62 @@
+//
+// Base
+//
+
+@use "../abstracts/variables" as vars;
+@use "sass:map";
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: vars.$background;
+    // https://css-tricks.com/the-notch-and-css/
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+        env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto 15px auto;
+    padding-top: 80px;
+}
+
+canvas {
+    filter: blur(3px);
+    position: fixed;
+    z-index: -999;
+    width: 375px;
+    height: 812px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 300px;
+}
+
+hr {
+    border: none;
+    border-top: var(--line);
+    margin-top: 3rem;
+}
+
+.container {
+    width: 90%;
+    margin: 10px auto auto auto;
+    & > * + * {
+        margin-top: 10px;
+    }
+}

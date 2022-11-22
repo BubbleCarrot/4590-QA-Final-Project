@@ -1,0 +1,74 @@
+//
+// Media Queries
+//
+
+@use "./variables" as *;
+
+// smal
+@mixin smMd {
+    @media (min-width: #{$small-width}) and (max-width: #{$medium-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin smLg {
+    @media (min-width: #{$small-width}) and (max-width: #{$large-width - 1px}) {
+        @content;
+    }
+}
+
+// medium
+@mixin smMd {
+    @media (min-width: #{$small-width}) and (max-width: #{$medium-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin mdLg {
+    @media (min-width: #{$medium-width}) and (max-width: #{$large-width - 1px}) {
+        @content;
+    }
+}
+
+// large
+// /
+
+// INFINITYS
+// smal
+@mixin iSm {
+    @media (max-width: #{$medium-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin SmI {
+    @media (min-width: #{$medium-width - 1px}) {
+        @content;
+    }
+}
+
+// medium
+@mixin iMd {
+    @media (max-width: #{$medium-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin MdI {
+    @media (min-width: #{$medium-width - 1px}) {
+        @content;
+    }
+}
+
+// large
+@mixin lgI {
+    @media (min-width: #{$large-width}) {
+        @content;
+    }
+}
+
+@mixin Ilg {
+    @media (max-width: #{$large-width}) {
+        @content;
+    }
+}

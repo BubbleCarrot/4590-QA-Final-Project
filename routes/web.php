@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('pages/home'); });
+Route::get('/home', function () {return view('pages/home'); });
+Route::get('/book-now', function () {return view('pages/booking'); });
+Route::get('/service', function () {return view('pages/service'); });
+
+
+// Route::get('/', [ArticleController::class, 'index']);
+
+// // home
+// Route::prefix('/home')->group(function () {
+//     Route::get('', [ArticleController::class, 'index'])->name('home.index');
+// });

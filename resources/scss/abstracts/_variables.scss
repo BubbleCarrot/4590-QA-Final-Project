@@ -1,0 +1,82 @@
+//
+// Variables
+//
+
+/* Color */
+
+// as they are
+$black: #000;
+$white: #fff;
+
+$red-50: #ffe9e8;
+$red-100: #ffd6d3;
+$red-200: #ffafaa;
+$red-300: #ff8882;
+$red-400: #ff6259;
+$red-500: #ff3b30;
+$red-600: #f70d00;
+$red-700: #bf0a00;
+$red-800: #870700;
+$red-900: #4f0400;
+
+/* Color types */
+$primary: green;
+$primary-hover: blue;
+$secondary: rgb(68, 68, 255);
+$secondary-hover: rgb(195, 195, 255);
+$primary-dark: #34495e;
+$primary-dark-hover: #527394;
+
+// alert
+$success: green;
+$warning: $red-600;
+$danger: $red-50;
+
+// Color typography
+$textColorDark: $black;
+$textColorLight: $white;
+
+/* Utility */
+$background: $white;
+
+/* Positioning */
+$containerPadding: 2.5%;
+$headerHeight: 5rem;
+$borderRadius: 10px;
+$borderRadiusMedium: 5px;
+$borderRadiusSmall: 3px;
+$marginTop: 20px;
+
+/* Elevation | Shadows */
+$level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+/* Typography */
+$titleFont: "SignPainter", serif;
+$headingFont: "Karla", sans-serif;
+$bodyFont: "Montserrat", sans-serif;
+$baseFontSize: 100%;
+/*16px*/
+$h1: 3.052rem;
+$h2: 2.441rem;
+$h3: 1.953rem;
+$h4: 1.563rem;
+$h5: 1.25rem;
+$smallText: 0.8rem;
+
+// line
+$line-dark-1: solid 1px $black;
+$line-dark-2: solid 2px $black;
+$line-dark-3: solid 3px $black;
+$line-primary-1: solid 1px $primary;
+$line-primary-2: solid 2px $primary;
+$line-red-1: solid 1px $warning;
+
+// screens
+$small-width: 768px;
+$medium-width: 1024px;
+$large-width: 1680px;

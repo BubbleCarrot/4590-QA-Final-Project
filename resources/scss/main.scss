@@ -1,0 +1,18 @@
+// 1. Vendors
+@use "./vendor/normalize";
+
+// 2. Base
+@use "./base/base";
+@use "./base/fonts";
+@use "./base/typography";
+
+// 3. Layout
+@use "./layout/header";
+@use "./layout/footer";
+
+// 4. Components
+@use "./components/buttons";
+@use "./components/input";
+
+// 5. Pages
+@use "./pages/home";
