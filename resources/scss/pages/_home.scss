@@ -4,14 +4,14 @@
 
 .banner {
     position: relative;
-    background-color: grey;
     background-image: url(/public/images/banner.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: center;
-    height: calc(70vh - 48px);
+    height: calc(70vh - 32px);
+    padding-top: 97px;
 
     .banner:after {
         content: '';
@@ -31,33 +31,23 @@
 }
 
 .service-imgs {
+    position: relative;
     width: 308px;
     height: 280px;
-    overflow: hidden;
-    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
 }
 
-// .card-1, .card-2, .card-3, .card-4 {
-//     position: absolute;
-// }
+.service-imgs img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
-// .card-1 {
-//     top: -34%;
-// }
-
-// .card-2 {
-//     height: 295px;
-//     transform: scaleX(-1);
-// }
-
-// .card-3 {
-//     height: 289px;
-// }
-
-// .card-4 {
-//     height: 281px;
-// }
-
+.chiro {
+    transform: scaleX(-1);
+}
 
 .text-img {
     position: absolute;

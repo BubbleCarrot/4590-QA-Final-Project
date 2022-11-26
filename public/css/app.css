@@ -547,7 +547,6 @@ header .img-link {
 }
 
 .gn li {
-  text-transform: uppercase;
   font-size: 18px;
   border-bottom: 1px solid #868179;
 }
@@ -559,7 +558,7 @@ header .img-link {
 
 .gn a {
   text-decoration: none;
-  color: white;
+  color: black;
   padding: 12px 25px;
   display: block; /*click whole box*/
   font-size: 16px;
@@ -598,14 +597,14 @@ header .img-link {
 }
 .banner {
   position: relative;
-  background-color: grey;
   background-image: url(/public/images/banner.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   justify-content: center;
-  height: calc(70vh - 48px);
+  height: calc(70vh - 32px);
+  padding-top: 97px;
 }
 .banner .banner:after {
   content: "";
@@ -621,10 +620,23 @@ header .img-link {
 }
 
 .service-imgs {
+  position: relative;
   width: 308px;
   height: 280px;
-  overflow: hidden;
-  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.service-imgs img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.chiro {
+  transform: scaleX(-1);
 }
 
 .text-img {
@@ -640,6 +652,17 @@ header .img-link {
 .arrow {
   height: 100%;
   width: 50px;
+}
+
+@media (min-width: 576px) {
+  .services-container {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  .service-imgs {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=app.css.map*/
