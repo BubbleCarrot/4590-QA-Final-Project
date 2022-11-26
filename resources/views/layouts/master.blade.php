@@ -9,7 +9,11 @@
     <title>@yield('title', config('app.name'))</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="min-h-screen">

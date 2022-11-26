@@ -1,0 +1,172 @@
+/*
+|------------------------------------------
+|  Header
+|------------------------------------------
+*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    will-change: top;
+    transition: top .3s ease;
+    z-index: 999;
+    background-color: #fff;
+    padding: 15px 15px;
+}
+
+header.header-up {
+    top: -100px;
+    box-shadow: none;
+}
+
+.img-wrap {
+    flex-grow: 1;
+}
+
+header .img-link {
+    display: block;
+}
+
+/*
+|------------------------------------------
+|  Burger
+|------------------------------------------
+*/
+
+.gn-trigger {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    border: none;
+    outline: 0;
+    background: transparent;
+}
+
+.burger {
+    position: absolute;
+    background: rgba(30, 48, 64, .8);
+    width: 50px;
+    height: 5px;
+    right: 0;
+    top: 50%;
+}
+
+.burger:before, 
+.burger:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(30, 48, 64, .8);
+    width: 50px;
+    height: 5px;
+    right: 0;
+}
+
+.burger:before {
+    top: 14px;
+}
+
+.burger:after {
+    bottom: 14px;
+}
+
+.burger,
+.burger:before,
+.burger:after {
+    transition-property: transform, top, background;
+    background: rgba(30, 48, 64, .8);
+    transition-duration: .45s;
+    border-radius: 10px;
+}
+
+.gn-trigger.is-active .burger:before {
+    transform: rotate(45deg);
+    top: -2px;
+}
+
+.gn-trigger.is-active .burger:after {
+    transform: rotate(-45deg);
+    top: -2px;
+}
+
+.gn-trigger.is-active .burger {
+    background: rgba(117, 111, 102, 0);
+}
+
+/*
+|------------------------------------------
+|  Global Navigation
+|------------------------------------------
+*/
+
+.gn {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+}
+
+.gn li {
+    text-transform: uppercase;
+    font-size: 18px;
+    border-bottom: 1px solid #868179;
+}
+
+.gn li:last-child { /*layering effect*/
+    border: none;
+    box-shadow: -1px 4px 5px 0px rgba(71, 71, 71, 0.65);
+}
+
+.gn a {
+    text-decoration: none;
+    color: #ffff;
+    padding: 12px 25px;
+    display: block; /*click whole box*/
+    font-size: 16px;
+}
+
+/*
+|------------------------------------------
+|------------------------------------------
+|  Media Queries
+|------------------------------------------
+|------------------------------------------
+*/
+
+@media (min-width: 768px) {
+
+    .gn-trigger {
+        display: none;
+    }
+
+    .gn {
+        display: block !important;
+        position: static;
+    }
+
+    .gn-items {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .gn li {
+        border-bottom: transparent;
+    }
+
+    .gn li:last-child {
+        box-shadow: none;
+    }
+
+    .gn a {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+}
