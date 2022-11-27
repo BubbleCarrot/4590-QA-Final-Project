@@ -1,4 +1,4 @@
-<header class="px-8 py-2">
+<header class="px-8">
     <div class="img-wrap">
         <a class="img-link" href="index.php" title="Home Page">
             <img src="images/logo.svg" alt="Logo">
@@ -10,16 +10,16 @@
         <nav class="gn">
             <ul class="gn-items">
                 <li class="p-3">
-                    <a href="#about">About</a>
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="p-3">
-                    <a href="#services">Services</a>
+                    <a class="nav-link" href="#services">Services</a>
                 </li>
                 <li class="p-3">
-                    <a href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="p-3">
-                    <a href="#">Book Now</a>
+                    <a class="nav-link" href="#">Book Now</a>
                 </li>
             </ul>
         </nav>       

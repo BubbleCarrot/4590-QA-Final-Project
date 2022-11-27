@@ -3,7 +3,7 @@
 @section('content')
 <main>
     <section id="top" class="banner">
-        <h1>Central Wellness</h1>
+        <h1 class="px-4">Central Wellness</h1>
     </section>
     <section id="services" class="services pb-20 pt-10 px-10">
         <h2 class="text-center pb-8">Our Services</h1>
