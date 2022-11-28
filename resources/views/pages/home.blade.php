@@ -17,8 +17,8 @@
                     </a>
                 </div>
                 <div class="service-imgs mb-4 mx-5">
-                    <a href="#">
-                        <img class="chiro" src="images/chiro.png" alt="#">
+                    <a href="">
+                        <img class="chiro" src="images/chiro.png" alt="">
                         <p class="text-img">Chiropractor Treatment</p>
                     </a>
                 </div>
