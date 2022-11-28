@@ -20,5 +20,8 @@
         "sass": "^1.56.1",
         "sass-loader": "^13.2.0",
         "vite": "^3.0.0"
+    },
+    "dependencies": {
+        "tailwindcss": "^3.2.4"
     }
 }
