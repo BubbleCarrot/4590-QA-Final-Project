@@ -1,7 +1,7 @@
 <header class="px-8">
     <div class="img-wrap">
         <a class="img-link" href="{{ route('home.index') }}" title="Home Page">
-            <img src="images/logo.svg" alt="Logo">
+            <img src="{{asset('assets/images/logo.svg')}}" alt="Logo">
         </a>
     </div>
     <button class="gn-trigger" aria-labelledby="burger">

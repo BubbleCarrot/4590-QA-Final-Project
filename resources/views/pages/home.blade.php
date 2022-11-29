@@ -11,26 +11,26 @@
         <div class="flex justify-center">
             <div class="services-container flex flex-wrap justify-center">
                 <div class="service-imgs mb-4 mx-5">
-                    <a href="#">
-                        <img src="images/physical.png" alt="#">
+                    <a href="{{ route('service','physical-therapy') }}">
+                        <img src="{{ asset('assets/images/physical.png') }}" alt="#">
                         <p class="text-img">Physical Therapy</p>
                     </a>
                 </div>
                 <div class="service-imgs mb-4 mx-5">
-                    <a href="">
-                        <img class="chiro" src="images/chiro.png" alt="">
+                <a href="{{ route('service','chiropractic-treatment') }}">
+                        <img class="chiro" src="{{ asset('assets/images/chiro.png') }}" alt="">
                         <p class="text-img">Chiropractor Treatment</p>
                     </a>
                 </div>
                 <div class="service-imgs mb-4 mx-5">
-                    <a href="#">
-                        <img src="images/speech.jpg" alt="#">
+                <a href="{{ route('service','speech-therapy') }}">
+                        <img src="{{asset('assets/images/speech.jpg')}}" alt="#">
                         <p class="text-img">Speech Therapy</p>
                     </a>
                 </div>
                 <div class="service-imgs mb-4 mx-5">
-                    <a href="#">
-                        <img class="card-4" src="images/occ.jpeg" alt="#">
+                <a href="{{ route('service','occupational-therapy') }}">
+                        <img class="card-4" src="{{asset('assets/images/occ.jpeg')}}" alt="#">
                         <p class="text-img">Occupational Therapy</p>
                     </a>
                 </div>
@@ -87,7 +87,7 @@
         </div>
         <div>
             <a href="#top">
-                <img class="arrow m-auto" src="images/arrow-up.svg" alt="Page up">
+                <img class="arrow m-auto" src="{{asset('assets/images/arrow-up.svg')}}" alt="Page up">
             </a>
         </div>
 

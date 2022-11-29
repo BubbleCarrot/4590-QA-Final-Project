@@ -8,7 +8,7 @@
 		<h2>Speech Therapists</h2>
 		<div class="employee-con">
 			<div class="img-con">
-				<img class="employee-img" src="images/people/person2.jpg" alt="John Doe">
+				<img class="employee-img" src="{{asset('assets/images/people/person2.jpg')}}" alt="John Doe">
 			</div>
 			<div class="info-con">
 				<ul class="employee-info">
@@ -22,7 +22,7 @@
 		</div>
 		<div class="employee-con">
 			<div class="img-con">
-				<img class="employee-img" src="images/people/person3.jpg" alt="John Doe">
+				<img class="employee-img" src="{{asset('assets/images/people/person3.jpg')}}" alt="John Doe">
 			</div>
             <div class="info-con">
                 <ul class="employee-info">

@@ -8,7 +8,7 @@
 		<h2>Occupational Therapists</h2>
 		<div class="employee-con">
 			<div class="img-con">
-				<img class="employee-img" src="images/people/person6.jpg" alt="John Doe">
+				<img class="employee-img" src="{{asset('assets/images/people/person6.jpg')}}" alt="John Doe">
 			</div>
 		    <div class="info-con">
 			    <ul class="employee-info">
@@ -22,7 +22,7 @@
 		</div>
 		<div class="employee-con">
             <div class="img-con">
-                 <img class="employee-img" src="images/people/person1.jpg" alt="John Doe">
+                 <img class="employee-img" src="{{asset('assets/images/people/person1.jpg')}}" alt="John Doe">
             </div>
 			<div class="info-con">
 				<ul class="employee-info">
