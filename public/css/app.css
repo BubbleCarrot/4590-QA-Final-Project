@@ -1,6 +1,7 @@
 @import url(//db.onlinewebfonts.com/c/cfdf18a10f253f0aa9db6db978d328c0?family=SignPainter+HouseScript);
+@import url(https://fonts.cdnfonts.com/css/savoye-let);
+@import url(https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap);
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -392,7 +393,7 @@ h3,
 h4,
 h5 {
   margin: 1rem 0 1.38rem;
-  font-family: "Karla", sans-serif;
+  font-family: "Oxygen", sans-serif;
   font-weight: 400;
   line-height: 1.3;
 }
@@ -444,14 +445,13 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 25px;
+  z-index: 999;
   display: flex;
   align-items: center;
+  background-color: #fff;
   will-change: top;
   transition: top 0.3s ease;
-  z-index: 999;
-  background-color: #fff;
-  padding: 15px 15px;
+  padding: 1rem;
 }
 
 header.header-up {
@@ -540,7 +540,7 @@ header .img-link {
 .gn {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 84px;
   left: 0;
   width: 100%;
   background: #fff;
@@ -553,15 +553,37 @@ header .img-link {
 
 .gn li:last-child { /*layering effect*/
   border: none;
-  box-shadow: -1px 4px 5px 0px rgba(71, 71, 71, 0.65);
+  box-shadow: -1px 4px 5px 0px rgba(71, 71, 71, 0.35);
 }
 
 .gn a {
   text-decoration: none;
   color: black;
-  padding: 12px 25px;
+  padding: 10px 10px;
   display: block; /*click whole box*/
   font-size: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.gn a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #C3DCCD;
+  bottom: 15px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.gn a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 /*
@@ -572,6 +594,9 @@ header .img-link {
 |------------------------------------------
 */
 @media (min-width: 768px) {
+  header {
+    padding: 0.5rem;
+  }
   .gn-trigger {
     display: none;
   }
@@ -590,10 +615,6 @@ header .img-link {
   .gn li:last-child {
     box-shadow: none;
   }
-  .gn a {
-    padding: 15px;
-    font-size: 18px;
-  }
 }
 .form-input {
   display: flex;
@@ -602,14 +623,15 @@ header .img-link {
 
 .banner {
   position: relative;
-  background-image: url(/public/images/banner.jpeg);
+  background-image: url("/images/banner.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   justify-content: center;
-  height: calc(70vh - 32px);
-  padding-top: 97px;
+  align-items: center;
+  margin-top: 85px;
+  height: calc(65vh - 85px);
 }
 .banner .banner:after {
   content: "";
@@ -618,14 +640,51 @@ header .img-link {
   bottom: 0;
   top: 0;
 }
+.banner h1 {
+  font-family: "Savoye LET", sans-serif;
+  color: #3E614C;
+  font-size: 5rem;
+  margin-top: 2rem;
+}
+.banner img {
+  width: 860px;
+  height: 137px;
+}
 
+.services, .about, .contact {
+  position: relative;
+  scroll-margin-top: 5rem;
+}
 .services h1, .services h2, .about h1, .about h2, .contact h1, .contact h2 {
   font-size: 2rem;
 }
 
+.rectangle {
+  position: absolute;
+  width: 215px;
+  height: 18px;
+  border-radius: 3px;
+  background-color: #C3DCCD;
+  transform: translate(-50%, 50%);
+  z-index: -1;
+  left: 50%;
+}
+
+.services .rectangle {
+  top: 47px;
+}
+
+.about .rectangle {
+  top: 7px;
+}
+
+.contact .rectangle {
+  top: 7px;
+}
+
 .service-imgs {
   position: relative;
-  width: 308px;
+  width: 300px;
   height: 280px;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
@@ -653,19 +712,188 @@ header .img-link {
   text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.5);
 }
 
+input {
+  border: 1px solid #3E614C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .arrow {
   height: 100%;
   width: 50px;
 }
 
-@media (min-width: 576px) {
-  .services-container {
-    flex-direction: row;
+@media (min-width: 768px) {
+  .banner {
+    margin-top: 84px;
+    height: calc(65vh - 84px);
+  }
+  .banner h1 {
+    font-size: 8rem;
+  }
+}
+@media (min-width: 992px) {
+  .banner h1 {
+    font-size: 9rem;
   }
 }
 @media (min-width: 1200px) {
-  .service-imgs {
+  .banner h1 {
+    font-size: 11rem;
+  }
+}
+/* =====================
+Services-Main 
+===================== */
+.services-main {
+  padding: 0 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.services-main h1 {
+  text-align: center;
+  margin: 75px 0;
+  position: relative;
+  opacity: 0;
+  animation: fadeintop 0.5s forwards;
+}
+
+.services-intro {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 3rem;
+  max-width: 110rem;
+  margin-bottom: 7.5rem;
+  line-height: 4.065rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeintop 0.5s forwards;
+}
+
+.employees {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.employees h2 {
+  margin-bottom: 7.5rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeinleft 0.5s forwards 0.5s;
+}
+
+.employee-con {
+  display: flex;
+  margin-bottom: 20rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeinleft 0.5s forwards 0.5s;
+}
+
+.employee-con .img-con {
+  margin-right: 8rem;
+}
+
+.employee-con .employee-img {
+  width: 30.8rem;
+  height: 28.1rem;
+  box-shadow: 0 0.5rem 0.4rem 0 rgba(0, 0, 0, 0.3019607843);
+}
+
+.employee-info {
+  height: 28.1rem;
+}
+
+.employee-info li {
+  font-size: 2.8rem;
+  line-height: 3.36rem;
+}
+
+.employee-con .book-button {
+  color: #fff;
+  font-size: 2.7rem;
+  background-color: #3E614C;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1rem;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+.employee-con .book-button:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+}
+
+@keyframes fadeintop {
+  from {
+    top: -2rem;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeinleft {
+  from {
+    left: -2rem;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+/*============================
+Media Queries
+============================*/
+@media (max-width: 769px) {
+  /* =====================
+  Services-Main 
+  ===================== */
+  .employee-con {
+    flex-direction: column;
+    align-items: center;
+  }
+  .employee-con .img-con {
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+  .employee-con .employee-img {
+    width: 61.6rem;
+    height: 56.2rem;
+  }
+  .employee-con .info-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .employee-info {
+    height: auto;
+    margin-bottom: 5rem;
+  }
+  .employee-info li {
+    margin-bottom: 3rem;
+  }
+  .employee-info li:last-child {
     margin-bottom: 0;
+  }
+  .employee-con .book-button {
+    padding: 1rem 1.2rem;
+  }
+  .employee-con .book-button:hover {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  }
+}
+@media (max-width: 577px) {
+  /* =====================
+  Services-Main 
+  ===================== */
+  .employee-con .employee-img {
+    width: 46.2rem;
+    height: 42.15rem;
   }
 }
 /*! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */

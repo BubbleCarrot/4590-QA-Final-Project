@@ -1,4 +1,4 @@
-<header class="w-screen px-8 py-2">
+<header class="px-8">
     <div class="img-wrap">
         <a class="img-link" href="{{ route('home.index') }}" title="Home Page">
             <img src="images/logo.svg" alt="Logo">

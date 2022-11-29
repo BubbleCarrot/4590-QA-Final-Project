@@ -14,6 +14,9 @@ const autoprefixer = require("autoprefixer");
 
 // bundle js
 mix.js("resources/js/app.js", "public/js");
+    mix.autoload({
+        jquery: ['$', 'window.$', 'window.jQuery']
+    });
 
 // bundle sass/css
 mix.sass("resources/scss/main.scss", "public/css/app.css")
