@@ -2,10 +2,10 @@
 
 @section('content')
 <main class="services-main">
-    <h1>Chiropractic Treatment</h1>
+    <h1 class="pb-8">Chiropractic Treatment</h1>
 	<p class="services-intro">Chiropractic Treatment refers to the adjustment and manipulation of the spine and joints in order to alleviate body aches, pains, and discomforts. Using hands of adjustment techniques, our Chiropractors strive to encourage your body to independently heal by focusing on the spin, which in turn affects mobility of the neck and back.</p>
 	<section class="employees">
-		<h2>Chiropractors</h2>
+		<h2 class="pb-8">Chiropractors</h2>
 		<div class="employee-con">
 			<div class="img-con">
 				<img class="employee-img" src="{{ asset('assets/images/people/person7.jpg') }}" alt="John Doe">

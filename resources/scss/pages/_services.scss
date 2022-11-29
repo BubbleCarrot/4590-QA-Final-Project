@@ -1,30 +1,47 @@
 /* =====================
 Services-Main 
+
+Stylings to apply to only service pages
 ===================== */
-html {
-    font-size: 10px;
-}
 
 .services-main {
-    padding: 0 25px;
+    margin-top: 12em;
+    padding: 0 2.5em;
     font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .services-main h1 {
-    text-align: center;
-    margin: 75px 0;
+    align-self: center;
+    margin: calc(7.5em/3.6) 0;
     position: relative;
+    font-size: 2rem;
     opacity: 0;
     animation: fadeintop 0.5s forwards;
+}
+
+.services-main h1:after {
+    content: '';
+    position: absolute;
+    width: 130%;
+    height: 33%;
+    border-radius: 3px;
+    background-color: #C3DCCD;
+    transform: translate(-50%, 50%);
+    z-index: -1;
+    top: 15%;
+    left: 50%;
 }
 
 .services-intro {
     margin: 0 auto;
     text-align: center;
-    font-size: 3rem;
-    max-width: 110rem;
-    margin-bottom: 7.5rem;
-    line-height: 4.065rem;
+    font-size: 3em;
+    max-width: calc(110em/3);
+    margin-bottom: calc(7.5em/3);
+    line-height: calc(4.065em/3);
     position: relative;
     opacity: 0;
     animation: fadeintop 0.5s forwards;
@@ -37,63 +54,77 @@ html {
 }
 
 .employees h2 {
-    margin-bottom: 7.5rem;
+    margin-bottom: calc(7.5em/2.6);
+    font-size: 2rem;
     position: relative;
     opacity: 0;
     animation: fadeinleft 0.5s forwards 0.5s;
 }
 
+.employees h2:after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 33%;
+    border-radius: 3px;
+    background-color: #C3DCCD;
+    transform: translate(-50%, 50%);
+    z-index: -1;
+    top: 15%;
+    left: 50%;
+}
+
 .employee-con {
     display: flex;
-    margin-bottom: 20rem;
+    margin-bottom: 20em;
     position: relative;
     opacity: 0;
     animation: fadeinleft 0.5s forwards 0.5s;
 }
 
 .employee-con .img-con {
-    margin-right: 8.0rem;
+    margin-right: 8.0em;
 }
 
 .employee-con .employee-img {
-    width: 30.8rem;
-    height: 28.1rem;
-    box-shadow: 0 0.5rem 0.4rem 0 #0000004D;
+    width: 30.8em;
+    height: 28.1em;
+    box-shadow: 0 0.5em 0.4em 0 #0000004D;
 
 }
 
 .employee-info {
-    height: 28.1rem;
+    height: 28.1em;
 }
 
 .employee-info li {
-    font-size: 2.8rem;
-    line-height: 3.36rem;
+    font-size: 2.8em;
+    line-height: calc(3.36em/2.8);
 }
 
 .employee-con .book-button {
     color: #fff;
-    font-size: 2.7rem;
+    font-size: 2.7em;
     background-color: #3E614C;
     border: none;
-    border-radius: 0.4rem;
-    padding: 0.8rem 1rem;
+    border-radius: calc(0.4em/2.7);
+    padding: calc(0.8em/2.7) calc(1em/2.7);
     font-weight: 500;
     transition: all .5s;
 }
 
 .employee-con .book-button:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+    transform: translateY(calc(-0.5em/2.7));
+    box-shadow: calc(0.1em/2.7) calc(0.5em/2.7) calc(0.5em/2.7) rgba(0, 0, 0, 0.6);
 }
 
 @keyframes fadeintop {
-	from {top: -2rem; opacity: 0;}
+	from {top: -2em; opacity: 0;}
 	to {top: 0; opacity: 1;}
 }
 
 @keyframes fadeinleft {
-	from {left: -2rem; opacity: 0;}
+	from {left: -2em; opacity: 0;}
 	to {left: 0; opacity: 1;}
 }
 
@@ -110,14 +141,14 @@ Media Queries
 }
 
 @media (max-width: 1201px) {
-	html {
+	.services-main {
         font-size: 8.5px;
     }
 }
 
 @media (max-width: 993px) {
 	
-    html {
+    .services-main {
         font-size: 7px;
     }
 
@@ -125,13 +156,9 @@ Media Queries
 
 @media (max-width: 769px) {
 
-    html {
+    .services-main {
         font-size: 7px;
     }
-
-    /* =====================
-    Services-Main 
-    ===================== */
 
     .employee-con {
         flex-direction: column;
@@ -140,12 +167,12 @@ Media Queries
 
     .employee-con .img-con {
         margin-right: 0;
-        margin-bottom: 5rem;
+        margin-bottom: 5em;
     }
 
     .employee-con .employee-img {
-        width: calc(30.8 * 2rem);
-        height: calc(28.1 * 2rem);
+        width: calc(30.8 * 2em);
+        height: calc(28.1 * 2em);
     }
 
     .employee-con .info-con {
@@ -156,11 +183,11 @@ Media Queries
 
     .employee-info {
         height: auto;
-        margin-bottom: 5rem;
+        margin-bottom: 5em;
     }
 
     .employee-info li {
-        margin-bottom: 3rem;
+        margin-bottom: calc(3em/2.8);
     }
 
     .employee-info li:last-child {
@@ -168,7 +195,7 @@ Media Queries
     }
 
     .employee-con .book-button {
-        padding: 1rem 1.2rem;
+        padding: calc(1em/2.7) calc(1.2em/2.7);
     }
 
     .employee-con .book-button:hover {
@@ -179,23 +206,19 @@ Media Queries
 
 @media (max-width: 577px) {
 
-    html {
+    .services-main {
         font-size: 6px;
     }
 
-    /* =====================
-    Services-Main 
-    ===================== */
-
     .employee-con .employee-img {
-        width: calc(30.8 * 1.5rem);
-        height: calc(28.1 * 1.5rem);
+        width: calc(30.8 * 1.5em);
+        height: calc(28.1 * 1.5em);
     }
 
 }
 
 @media (max-width: 281px) {
-    html {
+    .services-main {
         font-size: 4.5px;
     }
 

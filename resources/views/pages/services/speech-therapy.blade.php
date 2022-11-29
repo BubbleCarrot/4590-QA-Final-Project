@@ -2,10 +2,10 @@
 
 @section('content')
 <main class="services-main">
-	<h1>Speech Therapy</h1>
+	<h1 class="pb-8">Speech Therapy</h1>
 	<p class="services-intro">Speech Therapy focuses on the assessment and treatment of those with speech and language disorders. Our Speech Therapists help our clients develop and strengthen their speech disorders and impairments from a young age, to assist in preventing these conditions to worsen. Our methods range from oral exercises to activate the vocal cords, to jaw exercises and everything in-between.</p>
 	<section class="employees">
-		<h2>Speech Therapists</h2>
+		<h2 class="pb-8">Speech Therapists</h2>
 		<div class="employee-con">
 			<div class="img-con">
 				<img class="employee-img" src="{{asset('assets/images/people/person2.jpg')}}" alt="John Doe">

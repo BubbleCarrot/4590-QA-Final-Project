@@ -623,7 +623,7 @@ header .img-link {
 
 .banner {
   position: relative;
-  background-image: url("/images/banner.jpeg");
+  background-image: url("/assets/images/banner.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -687,7 +687,7 @@ header .img-link {
   position: relative;
   width: 300px;
   height: 280px;
-  background: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
 }
@@ -744,31 +744,47 @@ input {
 }
 /* =====================
 Services-Main 
-===================== */
-html {
-  font-size: 10px;
-}
 
+Stylings to apply to only service pages
+===================== */
 .services-main {
-  padding: 0 25px;
+  margin-top: 12em;
+  padding: 0 2.5em;
   font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .services-main h1 {
-  text-align: center;
-  margin: 75px 0;
+  align-self: center;
+  margin: 2.0833333333em 0;
   position: relative;
+  font-size: 2rem;
   opacity: 0;
   animation: fadeintop 0.5s forwards;
+}
+
+.services-main h1:after {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 33%;
+  border-radius: 3px;
+  background-color: #C3DCCD;
+  transform: translate(-50%, 50%);
+  z-index: -1;
+  top: 15%;
+  left: 50%;
 }
 
 .services-intro {
   margin: 0 auto;
   text-align: center;
-  font-size: 3rem;
-  max-width: 110rem;
-  margin-bottom: 7.5rem;
-  line-height: 4.065rem;
+  font-size: 3em;
+  max-width: 36.6666666667em;
+  margin-bottom: 2.5em;
+  line-height: 1.355em;
   position: relative;
   opacity: 0;
   animation: fadeintop 0.5s forwards;
@@ -781,58 +797,72 @@ html {
 }
 
 .employees h2 {
-  margin-bottom: 7.5rem;
+  margin-bottom: 2.8846153846em;
+  font-size: 2rem;
   position: relative;
   opacity: 0;
   animation: fadeinleft 0.5s forwards 0.5s;
 }
 
+.employees h2:after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 33%;
+  border-radius: 3px;
+  background-color: #C3DCCD;
+  transform: translate(-50%, 50%);
+  z-index: -1;
+  top: 15%;
+  left: 50%;
+}
+
 .employee-con {
   display: flex;
-  margin-bottom: 20rem;
+  margin-bottom: 20em;
   position: relative;
   opacity: 0;
   animation: fadeinleft 0.5s forwards 0.5s;
 }
 
 .employee-con .img-con {
-  margin-right: 8rem;
+  margin-right: 8em;
 }
 
 .employee-con .employee-img {
-  width: 30.8rem;
-  height: 28.1rem;
-  box-shadow: 0 0.5rem 0.4rem 0 rgba(0, 0, 0, 0.3019607843);
+  width: 30.8em;
+  height: 28.1em;
+  box-shadow: 0 0.5em 0.4em 0 rgba(0, 0, 0, 0.3019607843);
 }
 
 .employee-info {
-  height: 28.1rem;
+  height: 28.1em;
 }
 
 .employee-info li {
-  font-size: 2.8rem;
-  line-height: 3.36rem;
+  font-size: 2.8em;
+  line-height: 1.2em;
 }
 
 .employee-con .book-button {
   color: #fff;
-  font-size: 2.7rem;
+  font-size: 2.7em;
   background-color: #3E614C;
   border: none;
-  border-radius: 0.4rem;
-  padding: 0.8rem 1rem;
+  border-radius: 0.1481481481em;
+  padding: 0.2962962963em 0.3703703704em;
   font-weight: 500;
   transition: all 0.5s;
 }
 
 .employee-con .book-button:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+  transform: translateY(-0.1851851852em);
+  box-shadow: 0.037037037em 0.1851851852em 0.1851851852em rgba(0, 0, 0, 0.6);
 }
 
 @keyframes fadeintop {
   from {
-    top: -2rem;
+    top: -2em;
     opacity: 0;
   }
   to {
@@ -842,7 +872,7 @@ html {
 }
 @keyframes fadeinleft {
   from {
-    left: -2rem;
+    left: -2em;
     opacity: 0;
   }
   to {
@@ -854,33 +884,30 @@ html {
 Media Queries
 ============================*/
 @media (max-width: 1201px) {
-  html {
+  .services-main {
     font-size: 8.5px;
   }
 }
 @media (max-width: 993px) {
-  html {
+  .services-main {
     font-size: 7px;
   }
 }
 @media (max-width: 769px) {
-  html {
+  .services-main {
     font-size: 7px;
   }
-  /* =====================
-  Services-Main 
-  ===================== */
   .employee-con {
     flex-direction: column;
     align-items: center;
   }
   .employee-con .img-con {
     margin-right: 0;
-    margin-bottom: 5rem;
+    margin-bottom: 5em;
   }
   .employee-con .employee-img {
-    width: 61.6rem;
-    height: 56.2rem;
+    width: 61.6em;
+    height: 56.2em;
   }
   .employee-con .info-con {
     display: flex;
@@ -889,16 +916,16 @@ Media Queries
   }
   .employee-info {
     height: auto;
-    margin-bottom: 5rem;
+    margin-bottom: 5em;
   }
   .employee-info li {
-    margin-bottom: 3rem;
+    margin-bottom: 1.0714285714em;
   }
   .employee-info li:last-child {
     margin-bottom: 0;
   }
   .employee-con .book-button {
-    padding: 1rem 1.2rem;
+    padding: 0.3703703704em 0.4444444444em;
   }
   .employee-con .book-button:hover {
     transform: translateY(0);
@@ -906,19 +933,16 @@ Media Queries
   }
 }
 @media (max-width: 577px) {
-  html {
+  .services-main {
     font-size: 6px;
   }
-  /* =====================
-  Services-Main 
-  ===================== */
   .employee-con .employee-img {
-    width: 46.2rem;
-    height: 42.15rem;
+    width: 46.2em;
+    height: 42.15em;
   }
 }
 @media (max-width: 281px) {
-  html {
+  .services-main {
     font-size: 4.5px;
   }
 }
