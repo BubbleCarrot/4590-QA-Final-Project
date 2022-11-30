@@ -17,7 +17,9 @@
 				    <li>Specialization: All of these specializations that suit what you're looking for</li>
 				    <li>Days of Operation: Mondays, Tuesdays, Thursdays, and Sundays</li>
 			    </ul>
-			    <button class="book-button">Book an Appointment</button>
+				<a href="{{ route('book.index') }}">
+			    	<button class="book-button">Book an Appointment</button>
+				</a>
 		    </div>
 		</div>
 		<div class="employee-con">
@@ -31,7 +33,9 @@
 					<li>Specialization: All of these specializations that suit what you're looking for</li>
 					<li>Days of Operation: Mondays, Tuesdays, Thursdays, and Sundays</li>
 				</ul>
-				<button class="book-button">Book an Appointment</button>
+				<a href="{{ route('book.index') }}">
+					<button class="book-button">Book an Appointment</button>
+				</a>
 			</div>
 		</div>
 	</section>

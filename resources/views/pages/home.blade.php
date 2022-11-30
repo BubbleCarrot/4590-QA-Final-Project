@@ -46,11 +46,11 @@
             <p>Join our loyal cliental today!</p>
         </div>
     </section>
-    <section  id="contact" class="contact px-10">
+    <section id="contact" class="contact px-10 pb-10">
         <div class="flex-grow">
             <div class="max-w-screen-sm px-4 mx-auto">
             <!-- Index Header -->
-            <div class="grid grid-cols-12 border-b">
+            <div class="grid grid-cols-12">
                 <div class="col-span-12 flex items-center">
                     <h2 class="flex-grow text-center">Contact Us</h3>
                     <div class="rectangle"></div>
@@ -78,7 +78,7 @@
                     </div>   
                                                
                     <div class="text-center">
-                        <button class="btn py-2 px-4 text-white bg-green-700 font-bol rounded-sm" type="submit">Submit</button>                        
+                        <button class="btn contact-btn py-2 px-4 text-white font-bol rounded-sm" type="submit">Submit</button>                        
                     </div>       
                     </form>
                 </div>
@@ -90,7 +90,6 @@
                 <img class="arrow m-auto" src="{{asset('assets/images/arrow-up.svg')}}" alt="Page up">
             </a>
         </div>
-
     </section>       
 </main>
 @endsection

@@ -59,7 +59,6 @@
 
 .services .rectangle {
     top: 47px;
-  
 }
 
 .about .rectangle {
@@ -69,6 +68,8 @@
 .contact .rectangle {
     top: 7px;
 }
+
+// Homepage
 
 .service-imgs {
     position: relative;
@@ -109,9 +110,53 @@ input {
     width: 50px;
 }
 
+// Booking page
+
+.book, .date, .client-info {
+
+    position: relative;
+    scroll-margin-top: 5rem;
+}
+
+.book h1 {
+    font-size: 1.5rem;
+}
+
+.book .rectangle {
+    top: 12px;
+    width: 250px;
+}
+
+.date, .client-info {
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+.date .rectangle {
+    top: 4px;
+    width: 180px;
+}
+
+.date img {
+    padding-bottom: 2rem;
+}
+
+.client-info .rectangle {
+    width: 180px;
+}
+
+.col-span {
+    grid-column: span 12 / span 12;
+}
+
 // Media Queries
 @media (min-width: 576px) {
 
+    .date img {
+        margin: 0 auto;
+    }
 
 }
 
@@ -133,6 +178,45 @@ input {
     .banner h1 {
         font-size: 9rem;
     }
+
+    .book h1 {
+        font-size: 2rem;
+    }
+
+    .book .rectangle {
+        width: 390px;
+        height: 21px;
+    }
+
+    .date, .client-info {
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .col-span {
+        grid-column: span 6 / span 6;
+    }
+
+    .calendar-container {
+        margin-right: 2rem;
+    }
+
+    .date img {
+        padding-bottom: 0;
+    }
+
+    .date .rectangle {
+        width: 220px;
+        height: 18px;
+    }
+
+
+    .client-info .rectangle {
+        width: 285px;
+        height: 18px;
+    }
  
 }
 
@@ -140,6 +224,10 @@ input {
 
     .banner h1{
         font-size: 11rem;
+    }
+
+    .calendar-container {
+        margin-right: 3rem;
     }
 
   
