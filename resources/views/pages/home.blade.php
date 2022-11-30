@@ -17,19 +17,19 @@
                     </a>
                 </div>
                 <div class="service-imgs mb-4 mx-5">
-                <a href="{{ route('service','chiropractic-treatment') }}">
+                    <a href="{{ route('service','chiropractic-treatment') }}">
                         <img class="chiro" src="{{ asset('assets/images/chiro.png') }}" alt="">
                         <p class="text-img">Chiropractor Treatment</p>
                     </a>
                 </div>
                 <div class="service-imgs mb-4 mx-5">
-                <a href="{{ route('service','speech-therapy') }}">
+                    <a href="{{ route('service','speech-therapy') }}">
                         <img src="{{asset('assets/images/speech.jpg')}}" alt="#">
                         <p class="text-img">Speech Therapy</p>
                     </a>
                 </div>
                 <div class="service-imgs mb-4 mx-5">
-                <a href="{{ route('service','occupational-therapy') }}">
+                    <a href="{{ route('service','occupational-therapy') }}">
                         <img class="card-4" src="{{asset('assets/images/occ.jpeg')}}" alt="#">
                         <p class="text-img">Occupational Therapy</p>
                     </a>
