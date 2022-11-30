@@ -146,11 +146,7 @@ header .img-link {
       z-index: -1;
     }
   
-.gn a:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-   
-  }
+
 
 /*
 |------------------------------------------
@@ -189,4 +185,12 @@ header .img-link {
         box-shadow: none;
     }
 
+}
+
+@media (min-width: 992px) {
+    
+    .gn a:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
 }

@@ -9,14 +9,15 @@
     </button>
     <nav class="gn">
         <ul class="gn-items">
+            <!-- class nav-link for burger -->
             <li class="p-3">
-                <a href="#about">About</a>
+                <a class="nav-link" href="#about">About</a>
             </li>
             <li class="p-3">
-                <a href="#services">Services</a>
+                <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="p-3">
-                <a href="#contact">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="p-3">
                 <a href="{{ route('book.index') }}">Book Now</a>
