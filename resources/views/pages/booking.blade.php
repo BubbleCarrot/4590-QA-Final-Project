@@ -73,8 +73,7 @@
                     </div>
                     <div class="mb-4 pb-6">
                         <label class="block text-sm font-bold md-2" for="phone-number">Phone Number</label>
-                        <input type="text" id="phone_number" placeholder="phone number"
-                            class="shadow border rounded w-full py-2 px-3 text-gray-700">
+                        <input type="tel" id="phone_number" placeholder="phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="shadow border rounded w-full py-2 px-3 text-gray-700">
                     </div>                            
                     <div class="text-center">
                         <button class="btn client-btn py-2 px-4 text-white bg-green-700 font-bol rounded-sm" type="submit">Book</button>                        
