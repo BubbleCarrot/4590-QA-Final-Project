@@ -43,7 +43,7 @@
         <div class="container-xl flex flex-col items-center px-10">
             <p class="pb-8">Established in 2022, Central Wellness is a physical wellness facility that connects clients with professionals that will meet their needs. Our clients are our priority, and we ensure that from the moment a client enters our facilities to the moment they leave, they feel taken care of and heard.</p>
             <p class="pb-8 italic">Our priority is our clients' wellness and happiness.</p>
-            <p>Join our loyal cliental today!</p>
+            <p>Join our loyal clientele today!</p>
         </div>
     </section>
     <section id="contact" class="contact px-10 pb-10">
