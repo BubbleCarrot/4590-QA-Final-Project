@@ -12,6 +12,9 @@
         @csrf
 
         <section class="date px-10">
+
+            @include('partials.status')
+
             <div class="flex-grow">
                 <div class="max-w-screen-lg px-4 mx-auto">
                     <!-- Index Header -->
@@ -36,9 +39,9 @@
                                 @include('partials.error')
                                 @enderror
                                 <label for="service" class="block text-sm font-bold mb-2">Select Service</label>
-                                <input type="text" id="service"
+                                <input type="text" id="service" name="service"
                                     class="shadow border rounded w-full py-2 px-3 text-gray-700"
-                                    placeholder="Select Service">
+                                    value="{{ old('service') }}" placeholder="Select Service">
                             </div>
                             <div class="mb-4 pb-6">
                                 @error('practitioner')
@@ -46,16 +49,16 @@
                                 @enderror
                                 <label class="block text-sm font-bold md-2" for="practitioner">Select Health
                                     Practitioner</label>
-                                <input type="text" id="practitioner"
+                                <input type="text" id="practitioner" name="practitioner"
                                     class="shadow border rounded w-full py-2 px-3 text-gray-700"
-                                    placeholder="Select Health Practitioner">
+                                    value="{{ old('practitioner') }}" placeholder="Select Health Practitioner">
                             </div>
                             <div class="mb-4 pb-6">
                                 @error('time')
                                 @include('partials.error')
                                 @enderror
                                 <label class="block text-sm font-bold md-2" for="time">Time</label>
-                                <input type="time" id="time"
+                                <input type="time" id="time" value="{{ old('time') }}" name="time"
                                     class="shadow border rounded w-full py-2 px-3 text-gray-700">
                             </div>
                         </div>
@@ -82,24 +85,24 @@
                                 @include('partials.error')
                                 @enderror
                                 <label class="block text-sm font-bold md-2" for="name">Name</label>
-                                <input type="text" id="name" placeholder="full name"
-                                    class="shadow border rounded w-full py-2 px-3 text-gray-700">
+                                <input type="text" id="name" placeholder="full name" value="{{ old('name') }}"
+                                    name="name" class="shadow border rounded w-full py-2 px-3 text-gray-700">
                             </div>
                             <div class="mb-4 pb-6">
                                 @error('email')
                                 @include('partials.error')
                                 @enderror
                                 <label class="block text-sm font-bold md-2" for="email">Email</label>
-                                <input type="email" id="email" placeholder="email"
-                                    class="shadow border rounded w-full py-2 px-3 text-gray-700">
+                                <input type="email" id="email" placeholder="email" value="{{ old('email') }}"
+                                    name="email" class="shadow border rounded w-full py-2 px-3 text-gray-700">
                             </div>
                             <div class="mb-4 pb-6">
                                 @error('phone_number')
                                 @include('partials.error')
                                 @enderror
                                 <label class="block text-sm font-bold md-2" for="phone-number">Phone Number</label>
-                                <input type="tel" id="phone_number" placeholder="phone number"
-                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                <input type="tel" id="phone_number" placeholder="phone number" name="phone_number"
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{ old('phone_number') }}"
                                     class="shadow border rounded w-full py-2 px-3 text-gray-700">
                             </div>
                             <div class="text-center">

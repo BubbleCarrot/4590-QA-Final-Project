@@ -3,67 +3,40 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class SendBookingMail extends Mailable
+class sendBookingMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    private $message;
+    private $mail_data;
 
     /**
-     * Create a new message instance.
+     * Create a new mail_data instance.
      *
      * @return void
      */
-    public function __construct($message)
+    public function __construct($mail_data)
     {
-        $this->message = $message;
+        $this->mail_data = $mail_data;
     }
 
     /**
-     * Get the message envelope.
+     * Build the mail_data.
      *
-     * @return \Illuminate\Mail\Mailables\Envelope
+     * @return $this
      */
-    public function envelope()
+    public function build()
     {
-        return new Envelope(
-            subject: 'Booking Confirmation '. config('app.name'),
-        );
-    }
-
-    /**
-     * Get the message content definition.
-     *
-     * @return \Illuminate\Mail\Mailables\Content
-     */
-    public function content()
-    {
-
-        // dd($this->message);
-
-        return $this
-        ->subject($this->message['subject'])
-        ->markdown('email.booking', [ 'message'=>$this->message['message']]);
-
-        // return new Content(
-        //     view: 'email.booking',
-        //     with: $this->message,
-        // );
-    }
-
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array
-     */
-    public function attachments()
-    {
-        return [];
+        return $this->subject($this->mail_data['subject'])
+        ->markdown('email.booking', [
+            'text' => $this->mail_data['text'],
+            'name' => $this->mail_data['name'],
+            'time' => $this->mail_data['time'],
+            'service' => $this->mail_data['service'],
+            'practitioner' => $this->mail_data['practitioner'],
+            'phone_number' => $this->mail_data['phone_number'],
+        ]);
     }
 }

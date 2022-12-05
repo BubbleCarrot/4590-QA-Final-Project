@@ -1,7 +1,11 @@
 @component('mail::message')
 
-Demo
+{{ $text }}<br />
 
-{{ $message }}
+Name: {{ $name }}<br />
+Time: {{ $time }}<br />
+Service: {{ $service }}<br />
+Practitioner: {{ $practitioner }}<br />
+Phone number: {{ $phone_number }}<br />
 
 @endcomponent

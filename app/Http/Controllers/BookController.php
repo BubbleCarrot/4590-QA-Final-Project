@@ -34,11 +34,10 @@ class BookController extends Controller
         $booking->phone_number = $r->phone_number;
         $booking->save();
 
-        $mail_data = [
-            "name" => env('APP_NAME'),
-            "subject" => 'Demo',
-            "message" => 'Demo message',
-        ];
+
+        $mail_data = $r->all();
+        $mail_data['text'] = 'Thanks for booking';
+        $mail_data['subject'] = env('APP_NAME') . ' | Thanks for booking';
 
         // send conformation email
         Mail::to($r->email)->send(new SendBookingMail($mail_data));
