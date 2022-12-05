@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title') {{  'Physical Therapy | Central Wellness' }} @endsection
+
 @section('content')
 <main class="services-main">
 	<h1 class="pb-8">Physical Therapy</h1>

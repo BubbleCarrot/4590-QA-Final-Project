@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title') {{  'Book now | Central Wellness' }} @endsection
+
 @section('content')
 <main>
     <section class="book px-10 mt-48 mb-10">
