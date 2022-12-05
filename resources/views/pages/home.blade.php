@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title') {{ 'Central Wellness | Homepage' }} @endsection
+
 @section('content')
 <main>
     <section id="top" class="banner">
