@@ -16,9 +16,8 @@
 
 // 5. Pages
 @use "./pages/home";
+@use "./pages/services";
 
-// 6. Queries
-@use "./queries/responsive";
 
 // Tailwind css
 @tailwind base;

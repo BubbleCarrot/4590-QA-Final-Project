@@ -1,7 +1,7 @@
-<header class="w-screen px-8 py-2">
+<header class="px-8">
     <div class="img-wrap">
         <a class="img-link" href="{{ route('home.index') }}" title="Home Page">
-            <img src="images/logo.svg" alt="Logo">
+            <img src="{{asset('assets/images/logo.svg')}}" alt="Logo">
         </a>
     </div>
     <button class="gn-trigger" aria-labelledby="burger">
@@ -9,14 +9,15 @@
     </button>
     <nav class="gn">
         <ul class="gn-items">
+            <!-- class nav-link for burger -->
             <li class="p-3">
-                <a href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
             </li>
             <li class="p-3">
-                <a href="{{ route('services.index') }}">Services</a>
+                <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="p-3">
-                <a href="#">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="p-3">
                 <a href="{{ route('book.index') }}">Book Now</a>
