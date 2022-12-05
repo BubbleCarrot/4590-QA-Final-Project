@@ -39,9 +39,15 @@
                                 @include('partials.error')
                                 @enderror
                                 <label for="service" class="block text-sm font-bold mb-2">Select Service</label>
-                                <input type="text" id="service" name="service"
-                                    class="shadow border rounded w-full py-2 px-3 text-gray-700"
-                                    value="{{ old('service') }}" placeholder="Select Service">
+                                <select id="service" name="service"
+                                    class="shadow border rounded w-full py-2 px-3 text-gray-700">
+                                    <option disabled selected>-- Select</option>
+                                    @foreach ($services as $service)
+                                    <option value="{{ $service }}" @selected(old('service')==$service)>
+                                        {{ $service }}
+                                    </option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="mb-4 pb-6">
                                 @error('practitioner')
@@ -49,9 +55,15 @@
                                 @enderror
                                 <label class="block text-sm font-bold md-2" for="practitioner">Select Health
                                     Practitioner</label>
-                                <input type="text" id="practitioner" name="practitioner"
-                                    class="shadow border rounded w-full py-2 px-3 text-gray-700"
-                                    value="{{ old('practitioner') }}" placeholder="Select Health Practitioner">
+                                <select id="practitioner" name="practitioner"
+                                    class="shadow border rounded w-full py-2 px-3 text-gray-700">
+                                    <option disabled selected>-- Select</option>
+                                    @foreach ($practitioners as $practitioner)
+                                    <option value="{{ $practitioner }}" @selected(old('practitioner')==$practitioner)>
+                                        {{ $practitioner }}
+                                    </option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="mb-4 pb-6">
                                 @error('time')

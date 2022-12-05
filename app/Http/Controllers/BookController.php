@@ -10,7 +10,22 @@ use Illuminate\Support\Facades\Mail;
 class BookController extends Controller
 {
     function index () {
-        return view('pages.booking');
+
+        $services = [
+            'chiropractic_therapy' => 'Chiropractic therapy',
+            'occupational_therapy' => 'Occupational therapy',
+            'physical_therapy' => 'Physical therapy',
+            'speech_therapy' => 'Speech therapy',
+        ];
+
+        $practitioners = [
+            'John Doe',
+            'Jane Doe',
+            'Sam Smith',
+            'Peter Parker',
+        ];
+
+        return view('pages.booking', compact('services', 'practitioners'));
     }
 
     function send (Request $r) {
