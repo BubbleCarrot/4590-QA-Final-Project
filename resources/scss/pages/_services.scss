@@ -20,6 +20,7 @@ Stylings to apply to only service pages
     font-size: 2rem;
     opacity: 0;
     animation: fadeintop 0.5s forwards;
+    text-align: center;
 }
 
 .services-main h1:after {
@@ -79,6 +80,7 @@ Stylings to apply to only service pages
     margin-bottom: 20em;
     position: relative;
     opacity: 0;
+    max-width: 1414px;
     animation: fadeinleft 0.5s forwards 0.5s;
 }
 
@@ -87,19 +89,15 @@ Stylings to apply to only service pages
 }
 
 .employee-con .employee-img {
-    width: 30.8em;
-    height: 28.1em;
+    min-width: 30.8em;
+    height: auto;
     box-shadow: 0 0.5em 0.4em 0 #0000004D;
-
-}
-
-.employee-info {
-    height: 28.1em;
 }
 
 .employee-info li {
     font-size: 2.8em;
     line-height: calc(3.36em/2.8);
+    margin-bottom: 3rem;
 }
 
 .employee-con .book-button {
@@ -172,7 +170,6 @@ Media Queries
 
     .employee-con .employee-img {
         width: calc(30.8 * 2em);
-        height: calc(28.1 * 2em);
     }
 
     .employee-con .info-con {
@@ -212,7 +209,6 @@ Media Queries
 
     .employee-con .employee-img {
         width: calc(30.8 * 1.5em);
-        height: calc(28.1 * 1.5em);
     }
 
 }
