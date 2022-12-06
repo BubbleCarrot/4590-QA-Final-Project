@@ -24,7 +24,7 @@ Route::prefix('')->controller(HomeController::class)->group(function () {
 });
 
 Route::prefix('/book-now')->controller(BookController::class)->group(function () {
-    Route::get('', 'index')->name('book.index');
+    Route::get('/{service?}', 'index')->name('book.index');
     Route::post('', 'send')->name('book.send');
 });
 

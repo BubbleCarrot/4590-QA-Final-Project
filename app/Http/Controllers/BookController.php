@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Mail;
 
 class BookController extends Controller
 {
-    function index () {
+    function index ($service = null) {
 
         $services = [
             'chiropractic_therapy' => 'Chiropractic therapy',
@@ -19,11 +19,23 @@ class BookController extends Controller
         ];
 
         $practitioners = [
-            'John Doe',
-            'Jane Doe',
-            'Sam Smith',
-            'Peter Parker',
+            'Allyson Torrensen',
+            'Declan McFinley',
+            'James Mendoza',
+            'Lily Washington',
+            'Fay Park-Lemington',
+            'Evan Azan',
+            'Tina Ralls',
+            'Maggie Moreau',
         ];
+
+
+        if ($service) {
+            $cleanString = str_replace('-', '_', $service);
+            $selected_service = $cleanString;
+
+            return view('pages.booking', compact('services', 'practitioners', 'selected_service'));
+        }
 
         return view('pages.booking', compact('services', 'practitioners'));
     }
