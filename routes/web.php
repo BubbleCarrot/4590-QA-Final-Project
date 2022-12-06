@@ -18,8 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::prefix('')->controller(HomeController::class)->group(function () {
-    Route::get('/', 'index');
+    Route::get('/', 'index')->name('home.home');
     Route::get('/home', 'index')->name('home.index');
+    Route::post('', 'send')->name('contact.send');
 });
 
 Route::prefix('/book-now')->controller(BookController::class)->group(function () {
@@ -31,11 +32,4 @@ Route::prefix('/service')->controller(ServicesController::class)->group(function
     Route::get('', 'index')->name('services.index');
 
     Route::get('/{service}', 'service', )->name('service');
-
-    // Route::get('occupational-therapy', 'services')->name('services.occupational', 'occupational-therapy');
-
-    // Route::get('physical-therapy', 'services')->name('services.physical', 'physical-therapy');
-
-    // Route::get('speech-therapy', 'services')->name('services.speech', 'speech-therapy');
-
 });
