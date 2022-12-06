@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('')->controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home.home');
     Route::get('/home', 'index')->name('home.index');
+    Route::post('', 'send')->name('contact.send');
 });
 
 Route::prefix('/book-now')->controller(BookController::class)->group(function () {

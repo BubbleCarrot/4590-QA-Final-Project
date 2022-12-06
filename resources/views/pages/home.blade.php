@@ -62,25 +62,39 @@
                 </div>
                 <!-- End: Index Header -->
 
+                @include('partials.status')
+
                 <!-- Create: Form -->
                 <div class="grid grid-cols-12 py-10">
                     <div class="col-span-12">
-                        <form>
+                        <form action="{{ route('contact.send') }}" method="POST">
+                            @csrf
+
                             <div class="mb-4 pb-6">
-                                <label class="block text-sm font-bold mb-2" for="">Name</label>
-                                <input class="rounded w-full py-2 px-3 text-gray-700" id="" type="name" name="name"
-                                    placeholder="full name">
+                                @error('name')
+                                @include('partials.error')
+                                @enderror
+                                <label class="block text-sm font-bold mb-2" for="name">Name</label>
+                                <input class="rounded w-full py-2 px-3 text-gray-700" id="name" type="name" name="name"
+                                    value="{{ old('name') }}" placeholder="full name">
                             </div>
 
                             <div class="mb-4 pb-6">
-                                <label class="block text-sm font-bold mb-2" for="">Email</label>
-                                <input class="rounded w-full py-2 px-3 text-gray-700" id="" type="email" name="email"
-                                    placeholder="email">
+                                @error('email')
+                                @include('partials.error')
+                                @enderror
+                                <label class="block text-sm font-bold mb-2" for="email">Email</label>
+                                <input class="rounded w-full py-2 px-3 text-gray-700" id="email" type="email"
+                                    value="{{ old('email') }}" name="email" placeholder="email">
                             </div>
 
                             <div class="mb-4 pb-6">
-                                <label class="block text-sm font-bold mb-2" for="">Phone Number</label>
-                                <input class="rounded w-full py-2 px-3 text-gray-700" id="" type="email" name="email"
+                                @error('phone_number')
+                                @include('partials.error')
+                                @enderror
+                                <label class="block text-sm font-bold mb-2" for="phone_number">Phone Number</label>
+                                <input class="rounded w-full py-2 px-3 text-gray-700" id="phone_number"
+                                    value="{{ old('phone_number') }}" type="phone_number" name="phone_number"
                                     placeholder="phone number">
                             </div>
 
