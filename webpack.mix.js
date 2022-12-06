@@ -25,7 +25,7 @@ mix.sass("resources/scss/main.scss", "public/css/app.css")
 
 // live sync
 mix.browserSync({
-    proxy: "127.0.0.1:8001",
+    proxy: "127.0.0.1:8000",
     notify: false,
     browser: ["google chrome"],
 });
