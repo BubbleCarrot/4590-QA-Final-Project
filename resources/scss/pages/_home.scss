@@ -2,6 +2,10 @@
 // Home
 //
 
+body {
+    overflow-x: hidden;
+}
+
 .banner {
     position: relative;
     background-image: url("/assets/images/banner.jpeg");

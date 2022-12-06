@@ -24,7 +24,38 @@
 		</div>
 		<div class="employee-con">
             <div class="img-con">
+<<<<<<< Updated upstream
                  <img class="employee-img" src="{{asset('assets/images/people/person1.jpg')}}" alt="John Doe">
+=======
+                <img class="employee-img" src="{{asset('assets/images/people/person6.jpg')}}" alt="John Doe">
+            </div>
+            <div class="info-con">
+                <ul class="employee-info">
+                    <li>Tina Ralls</li>
+                    <li>Certifications:<br>BA in Biology and Health Science from the University of Toronto, Masters of Occupational Therapy from the University of Manitoba, Doctorate of Occupational Therapy and from the University of Oxford.</li>
+                    <li>Specialization:<br>Respective certifications obtained to work as a registered practitioner in B.C</li>
+                    <li>Days of Operation:<br>Mondays, Thursdays, Saturdays, and Sundays</li>
+                </ul>
+                <a href="{{ route('book.index') }}">
+                    <button class="book-button">Book an Appointment</button>
+                </a>
+            </div>
+        </div>
+        <div class="employee-con">
+            <div class="img-con">
+                <img class="employee-img" src="{{asset('assets/images/people/person1.jpg')}}" alt="John Doe">
+            </div>
+            <div class="info-con">
+                <ul class="employee-info">
+                    <li>Maggie Moreau</li>
+                    <li>Certifications:<br>BA in Kinesiology from the University of Victoria, Masters of Pe-occupational Therapy and Occupational Therapy from the University of Toronto, Doctorate of Occupational Therapy from the University of British Columbia.</li>
+                    <li>Specialization:<br>Respective certifications obtained to work as a registered practitioner in B.C</li>
+                    <li>Days of Operation:<br>Mondays, Wednesdays, Thursdays, and Fridays</li>
+                </ul>
+                <a href="{{ route('book.index') }}">
+                    <button class="book-button">Book an Appointment</button>
+                </a>
+>>>>>>> Stashed changes
             </div>
 			<div class="info-con">
 				<ul class="employee-info">
